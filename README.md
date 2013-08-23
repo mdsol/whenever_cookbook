@@ -3,10 +3,18 @@ Whenever Cookbook
 The whenever cookbook default receipe includes the 'install' recipe to:
 * install the 'whenever' gem and its dependencies
 
-The whenever cookbook will include the 'wheneverize' recipe IF node attributes include `[:whenever][:update_version] = true`.
+The whenever cookbook will include the 'wheneverize' recipe IF node attributes include:
+
+```json
+{
+  "whenever" {
+    "update_tasks": true
+  }
+}
+```
 
 The wheneverize recipe:
-* creates a default schedule.rb file including tasks specified in 'whenever' chef attributes, and,
+* creates a default `schedule.rb` file including tasks specified in 'whenever' chef attributes, and,
 * runs `whenever --update-crontab`
 
 Requirements
@@ -52,8 +60,7 @@ Contributing
 
 TODO
 ----
-* add configurability to schedule.rb as provided by gem
-* split wheneverize recipe to provide encapsulation of operations
+* add configurability to schedule.rb as provided by whenever gem
 
 License and Authors
 -------------------
