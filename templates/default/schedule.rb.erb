@@ -1,0 +1,5 @@
+<% @whenever_tasks.each do |task| %>
+  every <%= task['unit_of_time'] %> do
+    <%= task['task'] %>
+  end
+<% end %>
