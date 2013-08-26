@@ -7,7 +7,7 @@ The whenever cookbook will include the 'wheneverize' recipe IF node attributes i
 
 ```json
 {
-  "whenever" {
+  "whenever": {
     "update_tasks": true
   }
 }
